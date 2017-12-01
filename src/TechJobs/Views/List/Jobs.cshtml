@@ -4,4 +4,19 @@
 
 @{ 
     // TODO #3 - Use the same list display from Views/Search/Index.cshtml 
+    @foreach (Dictionary<string, string> item in ViewBag.jobs)
+    {
+        <table border="1">
+            @foreach (KeyValuePair<string, string> itemline in item)
+            {
+                    <tr>
+                        <td width="150px"><strong>@itemline.Key</strong></td>
+                        <td width="250px"> @itemline.Value</td>
+                    </tr>
+
+            }
+        </table>
+        <br />
+
+    }
 }
